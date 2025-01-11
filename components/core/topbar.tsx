@@ -232,7 +232,7 @@ export default function TopBar() {
                             <Image src={Telegram} alt={"Telegram"} width={32} height={32} className="rounded-xl"/>
                         </Button>
                         <Button variant="ghost" size="icon" className={"hover:bg-white/20 p-1 rounded-xl"}
-                                onClick={() => window.open("https://t.me/manticoreworldsol", "_blank")}>
+                                onClick={() => window.open("https://github.com/manticore-world", "_blank")}>
                             <Image src={Github} alt={"Github"} width={32} height={32} className="rounded-xl"/>
                         </Button>
                     </div>
