@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 
 import {Logo} from '@/public/icons';
 import {Avatar, AvatarFallback, AvatarImage} from '@/components/ui/avatar'
@@ -8,6 +8,7 @@ import {Button} from "@/components/ui/button";
 import {Send} from "lucide-react";
 import {ScrollArea} from "@/components/ui/scroll-area";
 import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger,} from "@/components/ui/tooltip"
+import "@/styles/Chat.module.css";
 
 export default function Chat() {
     return (
@@ -41,18 +42,19 @@ export default function Chat() {
 }
 
 function AIMessage() {
-    return <div className={"flex flex-wrap gap-1 my-2 flex"}>
+    const message = useStreamText("Hello, I'm Manticore. How can I help you today?");
+    return <div className={"flex flex-wrap gap-1 my-2"}>
         <Avatar>
             <AvatarImage src={Logo.src}/>
             <AvatarFallback>AI</AvatarFallback>
         </Avatar>
         <div className={"bg-neutral-900 rounded-xl p-2 space-y-2 text-white"}>
-            {streamText("Hello, I'm Manticore. How can I help you today?")}
+            {message}
         </div>
     </div>
 }
 
-function streamText(text: string) {
+function useStreamText(text: string) {
     const [message, setMessage] = useState<string>("");
     const [index, setIndex] = useState<number>(0);
 
@@ -73,24 +75,3 @@ function streamText(text: string) {
         <div className={"cursor-effect h-4 w-1.5 bg-white"}/>
     </div>;
 }
-
-/*
-function UserMessage() {
-    return <div className={"flex flex-wrap gap-1"}>
-        <div className={"flex-1 bg-white/20  shadow-lg rounded-xl p-2 space-y-2 text-white"}>
-            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, ducimus earum
-                fugiat impedit iusto maiores modi nostrum obcaecati reiciendis reprehenderit suscipit
-                vero! Aspernatur facilis non numquam omnis quaerat quas quis.
-            </div>
-            <div>Excepturi recusandae totam ullam velit voluptate. Aliquid, aspernatur cum ducimus
-                minima nisi nostrum officiis optio ratione sunt temporibus. Distinctio dolores
-                laboriosam nostrum numquam omnis optio qui sint, sunt totam voluptatibus.
-            </div>
-        </div>
-        <Avatar>
-            <AvatarImage src="https://github.com/shadcn.png"/>
-            <AvatarFallback>US</AvatarFallback>
-        </Avatar>
-    </div>
-}*/
-

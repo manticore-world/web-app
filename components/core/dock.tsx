@@ -4,7 +4,7 @@ import React, {ReactElement, ReactNode, useRef} from 'react';
 
 import * as Tooltip from '@radix-ui/react-tooltip';
 import {animate, motion, MotionValue, useMotionValue, useSpring, useTransform,} from 'framer-motion';
-import {DexScreener, Drift, Jito, Jupiter,  Logo, Marginfi, Meteora, Orca, Pump, Raydium} from '@/public/icons';
+import {DexScreener, Jito, Jupiter, Logo, Marginfi, Meteora, Orca, Pump, Raydium,Drift} from '@/public/icons';
 import {StaticImageData} from 'next/image';
 import {Window, WindowsProps} from '@/types/window';
 import Chat from '@/components/core/chat';

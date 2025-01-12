@@ -2,9 +2,7 @@ import React from "react";
 import {Open_Sans as Sans} from "next/font/google";
 import type {Metadata} from "next";
 import "./globals.css";
-
-import Desktop from "@/components/core/desktop";
-
+import Header from "@/components/core/header";
 
 const sans = Sans({
     subsets: ["latin"],
@@ -13,8 +11,8 @@ const sans = Sans({
 
 
 export const metadata: Metadata = {
-    title: "Manticore Protocol",
-    description: "Manticore Protocol is a decentralized protocol for creating and trading synthetic assets.",
+    title: "Manticore World",
+    description: "DeFi + AI: Empowering the future of decentralized finance with smart, automated solutions on Solana",
 };
 
 export default function RootLayout({
@@ -22,17 +20,13 @@ export default function RootLayout({
                                    }: Readonly<{
     children: React.ReactNode;
 }>) {
-
     return (
         <html lang="en">
         <body
-            className={`${sans.className}`}
-
+            className={`${sans.className} dark`}
         >
-        <div className={"pt-8"}>
-            {children}
-        </div>
-        <Desktop/>
+        <Header/>
+        {children}
         </body>
         </html>
     );
