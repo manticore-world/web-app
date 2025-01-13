@@ -36,17 +36,17 @@ const APPS: App[] = [
     {
         name: 'jup.ag',
         icon: Jupiter,
-        content: <iframe src="https://jup.ag/" className="w-full h-full"/>,
+        content: <iframe src="https://jup.ag/swap/SOL-EG7R5jGp7jV4cndoSMXDdH1Y6xBAi5RZjs5rmmTqpump" className="w-full h-full"/>,
     },
     {
         name: 'raydium.io',
         icon: Raydium,
-        content: <iframe src="https://raydium.io/" className="w-full h-full"/>,
+        content: <iframe src="https://raydium.io/swap/?inputMint=EG7R5jGp7jV4cndoSMXDdH1Y6xBAi5RZjs5rmmTqpump&outputMint=sol" className="w-full h-full"/>,
     },
     {
         name: 'orca.so',
         icon: Orca,
-        content: <iframe src="https://orca.so/" className="w-full h-full"/>,
+        content: <iframe src="https://www.orca.so/?tokenIn=EG7R5jGp7jV4cndoSMXDdH1Y6xBAi5RZjs5rmmTqpump&tokenOut=So11111111111111111111111111111111111111112" className="w-full h-full"/>,
     },
     {
         name: 'meteora.ag',
@@ -71,14 +71,14 @@ const APPS: App[] = [
     {
         name: 'pump.fun',
         icon: Pump,
-        url: 'https://pump.fun/',
+        url: 'https://pump.fun/coin/EG7R5jGp7jV4cndoSMXDdH1Y6xBAi5RZjs5rmmTqpump',
         content: <NotSupportedWindow/>,
         divideLeft: true
     },
     {
         name: 'dexscreener.com',
         icon: DexScreener,
-        url: 'https://dexscreener.com/',
+        url: 'https://dexscreener.com/solana/gdqaxlgjbknwqxgbuhjuby6ssztfuhwgsesegvuqjygu',
         content: <NotSupportedWindow/>,
     },
 ];

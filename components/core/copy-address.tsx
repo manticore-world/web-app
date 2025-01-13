@@ -5,7 +5,7 @@ import {Badge} from "@/components/ui/badge";
 import {Copy,CheckCheck} from "lucide-react";
 import { useToast } from "@/hooks/use-toast"
 
-const address = "CA:?"
+const address = "EG7R5jGp7jV4cndoSMXDdH1Y6xBAi5RZjs5rmmTqpump"
 
 export default function CopyAddress({className}: { className?: string }) {
     const { toast } = useToast()
