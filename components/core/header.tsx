@@ -9,6 +9,8 @@ import {BookText, Rocket} from "lucide-react";
 import styles from "@/styles/Header.module.css";
 import {useRouter, usePathname} from "next/navigation";
 
+
+
 export default function Header(){
     const router = useRouter();
     const pathname = usePathname();
@@ -25,7 +27,7 @@ export default function Header(){
                 <div className="flex mx-auto gap-1">
                     <Button  className="rounded-full" onClick={() => router.push('/launch')}>
                         <Rocket size={32}/>
-                        Launch App
+                        <span className="font-bold">Launch App</span>
                     </Button>
                     <Button variant="ghost" className="rounded-full" onClick={() => window.open("https://manticore-2.gitbook.io/docs","_blank")}>
                         <BookText size={32}/>
