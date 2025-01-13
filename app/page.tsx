@@ -5,14 +5,15 @@ import {Separator} from "@/components/ui/separator";
 import Image from "next/image";
 import preview from "@/public/preview.png";
 import React from "react";
-import Link from "next/link";
 import ParticlesBackground from "@/components/core/particles-background";
+import CopyAddress from "@/components/core/copy-address";
 
 
 export default function Home() {
     return (
         <div className="flex flex-col p-8 gap-6">
             <ParticlesBackground/>
+            <CopyAddress className="mx-auto -mt-6"/>
             <div className="mx-auto">
                 <Badge variant="outline" className="rounded-full flex gap-2">
                     <Sparkles size={16} color="gold"/>
@@ -41,7 +42,7 @@ export default function Home() {
                 <Card className="p-4 bg-zinc-900/80 shadow-zinc-800 shadow-lg flex flex-col backdrop-blur-lg">
                     <MessageCircleQuestion size={64} className="mx-auto mb-8 stroke-white"/>
                     <h2 className="text-2xl font-bold pb-4">What is Manticore World?</h2>
-                    <p className="font-semibold opacity-70  mb-8">
+                    <div className="font-semibold opacity-70  mb-8">
                         <ul className="gap-2 flex flex-col">
                             <li>
                                 Manticore World is an innovative platform that merges decentralized finance (DeFi) and
@@ -61,12 +62,12 @@ export default function Home() {
                                 place.
                             </li>
                         </ul>
-                    </p>
+                    </div>
                 </Card>
                 <Card className="p-4 bg-zinc-900/80 shadow-zinc-800 shadow-lg flex flex-col backdrop-blur-lg">
                     <BookMarked size={64} className="m-auto mb-8 stroke-white"/>
                     <h2 className="text-2xl font-bold pb-4">Manticore AI: The Crypto Expert in DeFAI</h2>
-                    <p className="font-semibold opacity-70  mt-auto mb-8">
+                    <div className="font-semibold opacity-70  mt-auto mb-8">
                         <ul className="flex flex-col gap-2">
                             <li>
                                 At the heart of our platform lies Manticore AI, an artificial intelligence chatbot
@@ -87,18 +88,18 @@ export default function Home() {
                                 crypto world.
                             </li>
                             <li>
-                                Manticore AI is more than just an AI; it's a companion designed to make your DeFAI
+                                Manticore AI is more than just an AI; it`s a companion designed to make your DeFAI
                                 experience flawless and accessible.
                             </li>
                         </ul>
-                    </p>
+                    </div>
                 </Card>
             </div>
             <div className="grid grid-cols-2 gap-4 mb-8">
                 <Card className="p-4 bg-zinc-900/80 shadow-zinc-800 shadow-lg flex flex-col backdrop-blur-lg">
                     <Layers size={64} className="m-auto mb-8 stroke-white"/>
                     <h2 className="text-2xl font-bold pb-4">Why Choose Manticore World?</h2>
-                    <p className="font-semibold opacity-70 mt-auto mb-8">
+                    <div className="font-semibold opacity-70 mt-auto mb-8">
                         <ul className="flex flex-col gap-2">
                             <li>
                                 Ease of Use: Access all DeFAI protocols through a single platform.
@@ -115,12 +116,12 @@ export default function Home() {
                             <li>
                             </li>
                         </ul>
-                    </p>
+                    </div>
                 </Card>
                 <Card className="p-4 bg-zinc-900/80 shadow-zinc-800 shadow-lg flex flex-col backdrop-blur-lg">
                     <Waypoints size={64} className="m-auto mb-8 stroke-white"/>
                     <h2 className="text-2xl font-bold pb-4">Simplify the DeFAI World with Manticore World</h2>
-                    <p className="font-semibold opacity-70  mt-auto mb-8">
+                    <div className="font-semibold opacity-70  mt-auto mb-8">
                         <ul className="flex flex-col gap-2">
                             <li>
                                 In this innovative space where decentralized finance and AI converge, we offer a more
@@ -130,10 +131,10 @@ export default function Home() {
                                 Be Part of the Future.
                             </li>
                             <li>
-                                Join Manticore World today and rediscover the power of DeFAI.
+                                Join Manticore World today and rediscover the power of DeFAI.
                             </li>
                         </ul>
-                    </p>
+                    </div>
                 </Card>
             </div>
             <div className="mx-auto">

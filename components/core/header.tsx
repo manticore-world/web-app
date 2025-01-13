@@ -4,18 +4,18 @@ import {Card,  CardHeader, CardTitle} from "@/components/ui/card";
 import Image from "next/image";
 import {Github, LogoFlat,Telegram,X} from "@/public/icons";
 import {Button} from "@/components/ui/button";
-import React from "react";
-import {BookText, Rocket} from "lucide-react";
+import React,{useState} from "react";
+import {BookText, Rocket,Loader2} from "lucide-react";
 import styles from "@/styles/Header.module.css";
 import {useRouter, usePathname} from "next/navigation";
 
-
-
 export default function Header(){
+    const [loading, setLoading] = useState(false);
     const router = useRouter();
     const pathname = usePathname();
+    const isLaunch = pathname === "/launch";
     return (
-       pathname !== "/launch" && <div className="flex items-center w-fit mx-auto mt-4 gap-2">
+        !isLaunch && <div className="flex items-center w-fit mx-auto mt-4 gap-2">
             <Card className="w-fit flex items-center bg-zinc-800/20 backdrop-blur-xl  shadow-lg shadow-white/5 overflow-hidden">
                 <Image src={LogoFlat.src} alt={"Manticore World"} width={128} height={128} className="fixed -left-14 opacity-30"/>
                 <CardHeader className="flex flex-row items-center gap-2">
@@ -25,8 +25,14 @@ export default function Header(){
                     </CardTitle>
                 </CardHeader>
                 <div className="flex mx-auto gap-1">
-                    <Button  className="rounded-full" onClick={() => router.push('/launch')}>
-                        <Rocket size={32}/>
+                    <Button  className="rounded-full" onClick={() => {
+                        setLoading(true);
+                        setTimeout(() => {
+                            router.push("/launch")
+                            setLoading(false);
+                        },300)
+                    }} disabled={loading}>
+                        {loading ? <Loader2 size={32} className="animate-spin"/> : <Rocket size={32}/>}
                         <span className="font-bold">Launch App</span>
                     </Button>
                     <Button variant="ghost" className="rounded-full" onClick={() => window.open("https://manticore-2.gitbook.io/docs","_blank")}>
